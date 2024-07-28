@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>更新</h1>
+	<form th:action="@{/updateDataInput}" method="post">
+		<select name="SongId">
+			<option th:each="list : ${list}" th:text="${list.song_id}"></option>
+		</select>
+		<button type="submit">更新</button>
+	</form>
+
+	<table border="1">
+		<tr>
+			<td>曲番号</td>
+			<td>曲名</td>
+			<td>歌手名</td>
+		</tr>
+		<tr th:each="list : ${list}">
+			<td th:text="${list.song_id}"></td>
+			<td th:text="${list.song_name}"></td>
+			<td th:text="${list.singer}"></td>
+		</tr>
+	</table>
+</body>
+
+</html>

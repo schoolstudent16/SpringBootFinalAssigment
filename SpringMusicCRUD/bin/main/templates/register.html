@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>登録</h1>
+<form th:action="@{/insert}" method="post">
+	<input type="text" name="songName">
+	<input type="text" name="singer">
+	<button type="submit">登録確認</button>
+</form>
+
+</body>
+</html>

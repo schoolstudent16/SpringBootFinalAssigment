@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/UpdateProcess}" method="post">
+		<input type="text" name="songName" th:value="${selectData.get().song_name}">
+		<input type="text" name="singer" th:value="${selectData.get().singer}">
+		<p><button type="submit">更新</button></p>
+	</form>
+</body>
+</html>
